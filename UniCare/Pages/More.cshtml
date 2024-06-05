@@ -1,0 +1,58 @@
+﻿@page
+@model UniCare.Pages.MoreModel
+@{
+}
+<section id="breadcrumb-area" style=" background: rgba(0, 0, 0, 0) url(../image/breadcrumb-bg.jpg) no-repeat scroll center center / cover;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="breadcrumb-title text-center">
+                    <h1 style="color:black;">Blog Details</h1>
+                    <a href="/" style="color:black;">Home</a> <i class="fa fa-angle-right" style="color:black;"></i> <span style="color:black;">Blog Details</span>
+                </div> <!-- /.page-breadcumb -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="blog-post" class="has-full-height-background-wrapper">
+    <div class="container">
+        <div class="row">
+            <!-- .blog-content -->
+
+
+            <div class="col-lg-8 col-md-8 col-xs-12 col-sm-12">
+
+             
+                    <!--Start single blog post item-->
+                    <div class="single-blog-post-item text-center">
+                        <div class="blog-img-holder">
+                            <img src="@Model.NewsBlog.Image" alt="">
+                             
+                            <div class="blog-post-date">
+                                <h1>
+                                    @Model.NewsBlog.Date.ToString("dd")
+                                    <br> <span>
+                                        @Model.NewsBlog.Date.ToString("MMM")
+                                    </span>
+                                </h1>
+                            </div>
+                        </div>
+                        <div class="blog-content-box">
+                            <div class="single-bolg-title">
+                                <h3>@Model.NewsBlog.Title</h3>
+
+                            </div>
+                            <div>
+                                @Html.Raw(Model.NewsBlog.Message)
+                            </div>
+                        </div>
+                    </div>
+
+                }
+
+
+            </div> <!-- /.blog-content -->
+        </div>
+    </div>
+</section>

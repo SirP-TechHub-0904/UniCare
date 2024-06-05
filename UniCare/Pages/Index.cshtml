@@ -1,0 +1,450 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+@*slider*@
+
+<style>
+    #myVideo {
+        /*position: fixed;*/
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+    }
+</style>
+<!-- Master Slider -->
+<div class="master-slider ms-skin-default" id="masterslider">
+    <div class="ms-slide slide-3" data-delay="5">
+        <!-- slide background -->
+
+
+        <video autoplay="autoplay" @*muted="muted"*@ loop="loop" id="myVideo">
+            <source src="~/image/vi.webm" type="video/webm">
+            Any alternate text.
+        </video>
+
+    </div>
+
+    <div class="ms-slide slide-3" data-delay="5">
+        <!-- slide background -->
+
+        <img src="~/smart/js/masterslider/style/blank.gif" data-src="../image/slide2.jpg" alt="Slide1 background" />
+
+
+        <h3 class="ms-layer title4 font-white font-uppercase font-thin-xs"
+            style="left: 120px; top: 150px; color: white; text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;"
+            data-type="text"
+            data-delay="2000"
+            data-duration="2000"
+            data-ease="easeOutExpo"
+            data-effect="skewleft(30,80)">
+            Exceptional Care Tailored to You
+        </h3>
+
+        <h5 class="ms-layer text1 font-white"
+            style="left: 120px; top: 210px; color: white; text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black; "
+            data-type="text"
+            data-effect="bottom(45)"
+            data-duration="2500"
+            data-delay="3000"
+            data-ease="easeOutExpo">
+            At UNIC Care Services Ltd., we deliver personalized care tailored to your needs. <br />Our dedicated team provides support with compassion and expertise, empowering you to live life fully.
+        </h5>
+        <a class="ms-layer btn3 uppercase"
+           style="left: 120px; top: 300px; background-color: rgb(41 48 18);"
+           data-type="text"
+           data-delay="3500"
+           data-ease="easeOutExpo"
+           data-duration="2000"
+           data-effect="scale(1.5,1.6)" href="#"> Know More</a>
+    </div>
+
+    <!-- slide 2 -->
+    <!-- end of slide -->
+
+    <div class="ms-slide slide-3" data-delay="5">
+        <!-- slide background -->
+
+        <img src="~/smart/js/masterslider/style/blank.gif" data-src="../image/slide1.jpg" alt="Slide1 background" />
+
+
+        <h3 class="ms-layer title4 font-white font-uppercase font-thin-xs"
+            style="left: 120px; top: 150px; color: white; text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;"
+            data-type="text"
+            data-delay="2000"
+            data-duration="2000"
+            data-ease="easeOutExpo"
+            data-effect="skewleft(30,80)">
+            A Warm Welcome to Elm House
+        </h3>
+
+        <h5 class="ms-layer text1 font-white"
+            style="left: 120px; top: 210px; color: white; text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;"
+            data-type="text"
+            data-effect="bottom(45)"
+            data-duration="2500"
+            data-delay="3000"
+            data-ease="easeOutExpo">
+            Welcome to Elm House, a haven where comfort, community, and care unite. Our inviting residential care home caters to individuals with learning disabilities and autism, fostering a supportive environment where all feel valued. Come tour Elm House and discover its warm embrace.
+        </h5>
+        <a class="ms-layer btn3 uppercase"
+           style="left: 120px; top: 300px; background-color: #f40000;"
+           data-type="text"
+           data-delay="3500"
+           data-ease="easeOutExpo"
+           data-duration="2000"
+           data-effect="scale(1.5,1.6)" href="#"> Know More</a>
+    </div>
+
+</div>
+
+
+<section id="landscaping-design-gardener">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="img-border">
+                    <img src="~/image/abt.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <h2>
+                    <b>Welcome to Elm House:</b>  Exceptional Care for Every Individual
+                </h2>
+                <p>
+                    Discover UNIC Care Services Ltd., a family-run health and social care company managing Elm House residential care home. Offering spacious accommodation and personalized care for adults with learning disabilities and Autism spectrum. Our person-centered approach focuses on achieving optimum health and well-being, promoting independence, and enhancing quality of life. Elm House provides a homely and secure environment, ensuring Service Users feel welcomed and supported. With dedicated staff available round the clock, individuals can live independently and to their fullest potential. Learn more about our compassionate care services
+                </p>
+                <a class="contact-button" href="#">
+                    <div class="contact-us-button">Know More</div>
+                    <i class="fa fa-arrow-circle-right"></i>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="our-services-gardener">
+    <div class="container">
+        <div class="section-title2">
+            <p>We offier differnt services</p>
+            <h1><span>our awesome services</span></h1>
+        </div>
+        <div class="row">
+            <!--Start single service icon-->
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="single-service-item" style="min-height:135px;">
+                    <div class="service-left-bg"></div>
+                    <div class="service-icon">
+                        <img src="~/image/a1.png" style="padding:4px;" />
+                    </div>
+                    <div class="service-text">
+                        <h4>Unrivalled Care</h4>
+                        <p>Assistance with general activities of daily living</p>
+                    </div>
+                </div>
+            </div>
+            <!--End single service icon-->
+            <!--Start single service icon-->
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="single-service-item" style="min-height:135px;">
+                    <div class="service-left-bg"></div>
+                    <div class="service-icon">
+                        <img src="~/image/a2.png" style="padding:4px;" />
+                    </div>
+                    <div class="service-text">
+                        <h4>Medication administration support</h4>
+                        <p>Prompting or administration of medication</p>
+                    </div>
+                </div>
+            </div>
+            <!--End single service icon-->
+            <!--Start single service icon-->
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="single-service-item" style="min-height:135px;">
+                    <div class="service-left-bg"></div>
+                    <div class="service-icon">
+                        <img src="~/image/a3.png" style="padding:4px;" />
+                    </div>
+                    <div class="service-text">
+                        <h4>Supporting cleanliness</h4>
+                        <p>Help, support and supervision with personal cleanliness</p>
+                    </div>
+                </div>
+            </div>
+            <!--End single service icon-->
+            <!--Start single service icon-->
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="single-service-item" style="min-height:135px;">
+                    <div class="service-left-bg"></div>
+                    <div class="service-icon">
+                        <img src="~/image/a4.png" style="padding:4px;" />
+                    </div>
+                    <div class="service-text">
+                        <h4>Companionship and Community</h4>
+                        <p>Support with enablement, escorting to daily tasks</p>
+                    </div>
+                </div>
+            </div>
+            <!--End single service icon-->
+            <!--Start single service icon-->
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="single-service-item" style="min-height:135px;">
+                    <div class="service-left-bg"></div>
+                    <div class="service-icon">
+                        <img src="~/image/a5.png" style="padding:4px;" />
+                    </div>
+                    <div class="service-text">
+                        <h4>Financial support</h4>
+                        <p>Support with managing personal finances</p>
+                    </div>
+                </div>
+            </div>
+            <!--End single service icon-->
+            <!--Start single service icon-->
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="single-service-item" style="min-height:135px;">
+                    <div class="service-left-bg"></div>
+                    <div class="service-icon">
+                        <img src="~/image/a6.png" style="padding:4px;" />
+                    </div>
+                    <div class="service-text">
+                        <h4>Meal preparation</h4>
+                        <p>Preparation of meals and drinks to the preference of the user</p>
+                    </div>
+                </div>
+            </div>
+            <!--End single service icon-->
+        </div>
+    </div>
+</section>
+
+<section id="video-section-gardener" style="background: rgba(0, 0, 0, 0) url(../image/bg1.png) no-repeat scroll center center / cover;">
+    <div class="container">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 video-text" style=" background-color: #2d5623; color: white; padding: 10px; border-radius: 15px;">
+            <h2 style="color:white;">Book a Tour of Elm House!</h2>
+            <p style="color:white;">
+                We provide a diverse range of leisure and recreational activities that people can choose to be involved with, which is fun and inspiring, engaging.
+            </p>
+            <a class="contact-button" href="" style="background-color:white;color:black;">
+                <div class="contact-us-button">Contact Us</div>
+                <i class="fa fa-arrow-circle-right"></i>
+            </a>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 video-text">
+            <h2>Knowledge About Our Service</h2>
+            <p>
+                Our service provides accommodation and personal care and support for people with learning disabilities and autism. We provide accommodation that is comfortable and welcoming and well-equipped with a unique service where bespoke support plan is tailored to individual’s needs, preference/s and goals.
+            </p>
+            <a class="contact-button" href="">
+                <div class="contact-us-button">View Our Services</div>
+                <i class="fa fa-arrow-circle-right"></i>
+            </a>
+        </div>
+    </div>
+</section>
+<style>
+    .slider {
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-flow: row nowrap;
+        -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+        -webkit-box-align: end;
+        -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+        align-items: flex-end;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .slider__nav {
+        width: 12px;
+        height: 12px;
+        margin: 2rem 12px;
+        border-radius: 50%;
+        z-index: 10;
+        outline: 6px solid #ccc;
+        outline-offset: -6px;
+        box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
+        cursor: pointer;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+        .slider__nav:checked {
+            -webkit-animation: check 0.4s linear forwards;
+            animation: check 0.4s linear forwards;
+        }
+
+            .slider__nav:checked:nth-of-type(1) ~ .slider__inner {
+                left: 0%;
+            }
+
+            .slider__nav:checked:nth-of-type(2) ~ .slider__inner {
+                left: -100%;
+            }
+
+            .slider__nav:checked:nth-of-type(3) ~ .slider__inner {
+                left: -200%;
+            }
+
+            .slider__nav:checked:nth-of-type(4) ~ .slider__inner {
+                left: -300%;
+            }
+
+    .slider__inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 400%;
+        height: 100%;
+        -webkit-transition: left 0.4s;
+        transition: left 0.4s;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-flow: row nowrap;
+        -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+    }
+
+    .slider__contents {
+        height: 100%;
+        padding: 2rem;
+        text-align: center;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        -webkit-flex-flow: column nowrap;
+        -ms-flex-flow: column nowrap;
+        flex-flow: column nowrap;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .slider__image {
+        font-size: 2.7rem;
+        color: #2196F3;
+    }
+
+    .slider__caption {
+        font-weight: 500;
+        margin: 2rem 0 1rem;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+        text-transform: uppercase;
+    }
+
+    .slider__txt {
+        color: #999;
+        margin-bottom: 3rem;
+        max-width: 300px;
+    }
+
+    @@-webkit-keyframes check {
+        50% {
+            outline-color: #333;
+            box-shadow: 0 0 0 12px #333, 0 0 0 36px rgba(51, 51, 51, 0.2);
+        }
+
+        100% {
+            outline-color: #333;
+            box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
+        }
+    }
+
+    @@keyframes check {
+        50% {
+            outline-color: #333;
+            box-shadow: 0 0 0 12px #333, 0 0 0 36px rgba(51, 51, 51, 0.2);
+        }
+
+        100% {
+            outline-color: #333;
+            box-shadow: 0 0 0 0 #333, 0 0 0 0 rgba(51, 51, 51, 0);
+        }
+    }
+</style>
+<section id="testimonials-gardener" style="padding: 50px 0 50px;">
+    <div class="container">
+
+        <div class="slider" style="height:300px;">
+            <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav" style="margin: 4px 10px 0;" />
+            <input type="radio" name="slider" title="slide2" class="slider__nav" style="margin: 4px 10px 0;" />
+            <input type="radio" name="slider" title="slide3" class="slider__nav" style="margin: 4px 10px 0;" />
+            <input type="radio" name="slider" title="slide4" class="slider__nav" style="margin: 4px 10px 0;" />
+            <div class="slider__inner">
+                @foreach (var item in Model.Testimony)
+                {
+                    <div class="slider__contents">
+                        <i class="slider__image fa fa-user"></i>
+                        <h2 class="slider__caption">@item.Name</h2>
+                        <p class="slider__txt">
+                            @item.Message
+                        </p>
+                    </div>
+                }
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="blog-gardener">
+    <div class="container">
+        <div class="section-title2">
+            <h1><span>Our Blogs</span></h1>
+        </div>
+        <div class="row">
+            @foreach (var item in Model.NewsBlog)
+            {
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 single-blog-post">
+                    <div class="img-holder">
+                        <img src="@item.Image" alt="">
+                        <div class="overlay">
+                            <div class="inner-holder">
+                                <ul class="button">
+                                    <li><a asp-page="./More" asp-route-id="@item.Id"><i class="fa fa-link"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="date">
+
+                            <b>@item.Date.ToString("dd")</b> <br> @item.Date.ToString("MMM")
+                        </div>
+                    </div>
+                    <ul>
+                        <li><span><b>By: </b> Admin</span></li>
+                        <li><a asp-page="./More" asp-route-id="@item.Id">Read More</a></li>
+                    </ul>
+                    <a asp-page="./More" asp-route-id="@item.Id"><h2>@item.Title</h2></a>
+                </div>
+            }
+        </div>
+    </div>
+</section>
