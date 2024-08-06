@@ -1,0 +1,96 @@
+﻿ .fancybox-margin {
+    margin-right: 17px;
+}
+ 
+@-webkit-keyframes spin {
+    0%
+
+{
+    -webkit-transform: rotate(0deg);
+}
+
+100% {
+    -webkit-transform: rotate(360deg);
+}
+
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+input.bito-email-input:-webkit-autofill,
+input.bito-email-input:-webkit-autofill:hover,
+input.bito-email-input:-webkit-autofill:focus {
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+#bito-body::-webkit-scrollbar,
+#emptyDiv-inner::-webkit-scrollbar,
+#loginParentDiv-outer::-webkit-scrollbar {
+    width: 4px;
+    border-radius: 24px;
+    color: #7a8084;
+}
+
+#bito-body::-webkit-scrollbar-thumb,
+#emptyDiv-inner::-webkit-scrollbar-thumb,
+#loginParentDiv-outer::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+    #bito-body::-webkit-scrollbar-thumb:hover,
+    #emptyDiv-inner::-webkit-scrollbar-thumb:hover,
+    #loginParentDiv-outer::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+.login-network-error-container {
+    padding: 10px 16px 8px;
+    color: rgb(255 0 0);
+}
+
+#loader {
+    background-color: #00000085;
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    height: 300px;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    z-index: 3002;
+    opacity: 9999;
+}
+
+.spinner {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: text-bottom;
+    border: 1.75px solid #fff;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: spinner-border .75s linear infinite;
+    margin-top: -30px
+}
+
+@keyframes spinner-border {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+ 

@@ -11,12 +11,12 @@ namespace UniCare.Areas.Identity.Pages.Account.Manage
 {
     public class SetPasswordModel : PageModel
     {
-        private readonly UserManager<IdentityUser> _userManager;
-        private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly UserManager<UniCare.Data.Model.Profile> _userManager;
+        private readonly SignInManager<UniCare.Data.Model.Profile> _signInManager;
 
         public SetPasswordModel(
-            UserManager<IdentityUser> userManager,
-            SignInManager<IdentityUser> signInManager)
+            UserManager<UniCare.Data.Model.Profile> userManager,
+            SignInManager<UniCare.Data.Model.Profile> signInManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;

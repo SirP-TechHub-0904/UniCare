@@ -2,36 +2,58 @@
 @model UniCare.Pages.ServicesModel
 @{
 }
-<section id="breadcrumb-area" style=" background: rgba(0, 0, 0, 0) url(../image/breadcrumb-bg.jpg) no-repeat scroll center center / cover;">
-    <div class="container">
+ <style>
+     .ulockd-srvc-column {
+         border: 1px solid #4eb350;
+         width: 100% !important;
+     }
+ </style>
+<div class="ulockd-inner-home" style=" background-image: url(../image/inner-pagebg.jpg);">
+    <div class="container text-center">
         <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="breadcrumb-title text-center">
-                    <h1 style="color:black;">Services</h1>
-                    <a href="/" style="color:black;">Home</a> <i class="fa fa-angle-right" style="color:black;"></i> <span style="color:black;">Services</span>
-                </div> <!-- /.page-breadcumb -->
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="awesome-service-blog-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="section-title2">
-
-                    <h1><span>Services & Amenities</span></h1>
+            <div class="ulockd-inner-conraimer-details">
+                <div class="col-lg-12">
+                    <h1 class="text-uppercase">SERVICES</h1>
+                </div>
+                <div class="col-lg-12">
+                    <div class="ulockd-icd-layer">
+                        <ul class="ulockd-icd-sub-menu">
+                            <li class="list-inline-item"><a href="#"> HOME </a></li>
+                            <li class="list-inline-item"><a href="#"> &gt; </a></li>
+                            <li class="list-inline-item"> <a href="#"> SERVICES </a> </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
+<section class="ulockd-servces-one pb70">
+    <div class="container">
         <div class="row">
-            <div class="awesome-service-blog-items">
-                <!--Start awesome service blog single-->
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                    <div class="awesome-service-blog-single" style="margin: 0 auto; text-align: center; box-shadow: 0px 10px 20px 0px rgb(13 82 43 / 90%);">
-                        <img src="~/image/nursing-home_38.jpeg" alt="" style="height:300px;margin:0 auto;text-align:center;">
-                        <h5>Our Services</h5>
+            <div class="col-lg-6 offset-lg-3 text-center">
+                <div class="main-title hvr-float-shadow">
+                    <h2 class="text-uppercase">Services & Amenities</h2>
+                    <p>Our service provides accommodation and personal care and support for people with learning disabilities and autism. We provide accommodation that is comfortable and welcoming and well-equipped with a unique service where bespoke support plan is tailored to individual’s needs, preference/s and goals.</p>
+                </div>
+            </div>
+             
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-xl-6">
+                <div class="ulockd-srvcs-column text-center">
+                    <div class="ulockd-srvcs-thumb">
+                        <img class="img-fluid img-whp" src="~/image/nursing-home_38.jpeg" alt="">
+                        <div class="ulockd-srvcs-overlay">
+                            <div class="ulockd-srvcs-icon">
+                                <a class="lightbox-image" data-fancybox-group="preject" href="~/image/nursing-home_38.jpeg">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ulockd-srvc-contnt">
+                        <h3 class="title"><a href="#">Our Services</a></h3>
+
                         <p>
 
                             Our care plan is not fixed and inflexible, this mean that our service users can choose what they want to do, how and when they want to do it. We take on the daily responsibilities of providing care and ensuring that our service users remain safe and secure.
@@ -41,152 +63,104 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                    <div class="awesome-service-blog-single" style="margin: 0 auto; text-align: center; box-shadow: 0px 10px 20px 0px rgb(13 82 43 / 90%);">
-                        <img src="~/image/kitchen_img-scaled.jpg" alt="" style="height:300px;margin:0 auto;text-align:center;">
-                        <h5>
-                            Our Accommodation
-                        </h5>
+            </div>
+            <div class="col-sm-6 col-xl-6">
+                <div class="ulockd-srvcs-column text-center">
+                    <div class="ulockd-srvcs-thumb">
+                        <img class="img-fluid img-whp" src="~/image/kitchen_img-scaled.jpg" alt="">
+                        <div class="ulockd-srvcs-overlay">
+                            <div class="ulockd-srvcs-icon">
+                                <a class="lightbox-image" data-fancybox-group="preject" href="~/image/kitchen_img-scaled.jpg">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ulockd-srvc-contnt">
+                        <h3 class="title"><a href="#">Our Accommodation</a></h3>
                         <p>
                             The home is situated in a quiet cul-de-sac of private / residential houses. The accommodation is highly visible, a modern detached property and presented to a highest standard. It is in the heart of a densely populated residential area with convenient, accessible and a short distance to the town centre, shops, local amenities, and transportation and services users are supported in using these local services. Check out our facilities below.
                         </p>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
-</section>
-
-<section id="project-version-one">
+</section> 
+<section class="service-two bg-img1 parallax pb70" data-stellar-background-ratio="0.3" style="background-position: 50% 81px;">
     <div class="container">
-
-        <div class="row normal-gallery" id="image-gallery-mix">
-
-            <div class="col-lg-3 col-sm-6 col-xs-12 tank outside mix" style="display: inline-block;">
-                <div class="single-latest-project-gardener">
-                    <img src="~/image/11.jpg" alt="">
-                    <div class="overlay">
-                        <div class="box-holder">
-                            <div class="content-box">
-                                <h3>
-                                    Sizeable bedrooms
-                                </h3>
-
-                            </div>
-                        </div>
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3 text-center">
+                <div class="main-title hvr-float-shadow">
+                    <h2 class="text-uppercase">Awesome <span class="text-thm">Facilities</span></h2>
+                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-lg-4">
+                <div class="ulockd-srvc-column hvr-underline-from-center">
+                    <div class="ulockd-srv-icon float-start"><span class="flaticon-nurse"></span></div>
+                    <div class="ulockd-srvc-details style2">
+                        <h3 class="title"><a href="#"> Sizeable bedrooms</a></h3>
                     </div>
-
                 </div>
             </div>
-            <div class="col-lg-3 col-sm-6 col-xs-12 tank outside mix" style="display: inline-block;">
-                <div class="single-latest-project-gardener">
-                    <img src="~/image/11.jpg" alt="">
-                    <div class="overlay">
-                        <div class="box-holder">
-                            <div class="content-box">
-                                <h3>
-                                    Internet
-                                </h3>
-
-                            </div>
-                        </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="ulockd-srvc-column hvr-underline-from-center">
+                    <div class="ulockd-srv-icon float-start"><span class="flaticon-medical-4"></span></div>
+                    <div class="ulockd-srvc-details style2">
+                        <h3 class="title"><a href="#">Internet</a></h3>
                     </div>
-
                 </div>
             </div>
-
-            <div class="col-lg-3 col-sm-6 col-xs-12 tank outside mix" style="display: inline-block;">
-                <div class="single-latest-project-gardener">
-                    <img src="~/image/11.jpg" alt="">
-                    <div class="overlay">
-                        <div class="box-holder">
-                            <div class="content-box">
-                                <h3>
-                                    Parking in front of the building
-                                </h3>
-
-                            </div>
-                        </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="ulockd-srvc-column hvr-underline-from-center">
+                    <div class="ulockd-srv-icon float-start"><span class="flaticon-office-block"></span></div>
+                    <div class="ulockd-srvc-details style2">
+                        <h3 class="title"><a href="#">Parking in front of the building</a></h3>
                     </div>
-
                 </div>
             </div>
-            <div class="col-lg-3 col-sm-6 col-xs-12 tank outside mix" style="display: inline-block;">
-                <div class="single-latest-project-gardener">
-                    <img src="~/image/11.jpg" alt="">
-                    <div class="overlay">
-                        <div class="box-holder">
-                            <div class="content-box">
-                                <h3>
-                                    Decent size garden at the rare
-                                </h3>
-
-                            </div>
-                        </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="ulockd-srvc-column hvr-underline-from-center">
+                    <div class="ulockd-srv-icon float-start"><span class="flaticon-folder"></span></div>
+                    <div class="ulockd-srvc-details style2">
+                        <h3 class="title"><a href="#">Decent size garden at the rare</a></h3>
                     </div>
-
                 </div>
             </div>
-            <div class="col-lg-3 col-sm-6 col-xs-12 tank outside mix" style="display: inline-block;">
-                <div class="single-latest-project-gardener">
-                    <img src="~/image/11.jpg" alt="">
-                    <div class="overlay">
-                        <div class="box-holder">
-                            <div class="content-box">
-                                <h3>
-                                    Modern equipped bathrooms/shower
-                                </h3>
-
-                            </div>
-                        </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="ulockd-srvc-column hvr-underline-from-center">
+                    <div class="ulockd-srv-icon float-start"><span class="flaticon-cross"></span></div>
+                    <div class="ulockd-srvc-details style2">
+                        <h3 class="title"><a href="#">Modern equipped bathrooms/shower</a></h3>
                     </div>
-
                 </div>
             </div>
-            <div class="col-lg-3 col-sm-6 col-xs-12 tank outside mix" style="display: inline-block;">
-                <div class="single-latest-project-gardener">
-                    <img src="~/image/11.jpg" alt="">
-                    <div class="overlay">
-                        <div class="box-holder">
-                            <div class="content-box">
-                                <h3>
-                                    Large communal areas, including dining area
-                                </h3>
-
-                            </div>
-                        </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="ulockd-srvc-column hvr-underline-from-center">
+                    <div class="ulockd-srv-icon float-start"><span class="flaticon-shape-1"></span></div>
+                    <div class="ulockd-srvc-details style2">
+                        <h3 class="title"><a href="#">Large communal areas, including dining area</a></h3>
                     </div>
-
                 </div>
             </div>
-
-            <div class="col-lg-3 col-sm-6 col-xs-12 tank outside mix" style="display: inline-block;">
-                <div class="single-latest-project-gardener">
-                    <img src="~/image/11.jpg" alt="">
-                    <div class="overlay">
-                        <div class="box-holder">
-                            <div class="content-box">
-                                <h3>
-                                    Modern kitchen
-                                </h3>
-
-                            </div>
-                        </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="ulockd-srvc-column hvr-underline-from-center">
+                    <div class="ulockd-srv-icon float-start"><span class="flaticon-shape-1"></span></div>
+                    <div class="ulockd-srvc-details style2">
+                        <h3 class="title"><a href="#">Modern kitchen</a></h3>
                     </div>
-
                 </div>
             </div>
-
-
-
-
         </div>
     </div>
 </section>
+
+ 
 
 <section id="landscaping-design-gardener">
     <div class="container">
-        <div class="row" style=" box-shadow: 0px 10px 20px 0px rgb(13 82 43 / 90%);">
+        <div class="row" style=" box-shadow: 0px 10px 20px 0px #6a3897;padding:30px;">
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <div class="img-border" style="margin:0 auto;text-align:center;">
                     <img src="~/image/nursing-home_39.jpeg" alt="" style="height:300px;margin:0 auto;text-align:center;">

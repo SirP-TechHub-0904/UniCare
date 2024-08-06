@@ -15,9 +15,9 @@ namespace UniCare.Areas.Identity.Pages.Account
     [AllowAnonymous]
     public class ResetPasswordModel : PageModel
     {
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<UniCare.Data.Model.Profile> _userManager;
 
-        public ResetPasswordModel(UserManager<IdentityUser> userManager)
+        public ResetPasswordModel(UserManager<UniCare.Data.Model.Profile> userManager)
         {
             _userManager = userManager;
         }

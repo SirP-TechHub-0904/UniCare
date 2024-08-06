@@ -10,13 +10,13 @@ namespace UniCare.Areas.Identity.Pages.Account.Manage
 {
     public class DeletePersonalDataModel : PageModel
     {
-        private readonly UserManager<IdentityUser> _userManager;
-        private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly UserManager<UniCare.Data.Model.Profile> _userManager;
+        private readonly SignInManager<UniCare.Data.Model.Profile> _signInManager;
         private readonly ILogger<DeletePersonalDataModel> _logger;
 
         public DeletePersonalDataModel(
-            UserManager<IdentityUser> userManager,
-            SignInManager<IdentityUser> signInManager,
+            UserManager<UniCare.Data.Model.Profile> userManager,
+            SignInManager<UniCare.Data.Model.Profile> signInManager,
             ILogger<DeletePersonalDataModel> logger)
         {
             _userManager = userManager;

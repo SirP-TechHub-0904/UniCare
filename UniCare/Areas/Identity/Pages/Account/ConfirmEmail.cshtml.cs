@@ -14,9 +14,9 @@ namespace UniCare.Areas.Identity.Pages.Account
     [AllowAnonymous]
     public class ConfirmEmailModel : PageModel
     {
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<UniCare.Data.Model.Profile> _userManager;
 
-        public ConfirmEmailModel(UserManager<IdentityUser> userManager)
+        public ConfirmEmailModel(UserManager<UniCare.Data.Model.Profile> userManager)
         {
             _userManager = userManager;
         }

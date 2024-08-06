@@ -2,70 +2,74 @@
 @model UniCare.Pages.NewsModel
 @{
 }
-<section id="breadcrumb-area" style=" background: rgba(0, 0, 0, 0) url(../image/breadcrumb-bg.jpg) no-repeat scroll center center / cover;">
-    <div class="container">
+<div class="ulockd-inner-home" style=" background-image: url(../image/inner-pagebg.jpg);">
+    <div class="container text-center">
         <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="breadcrumb-title text-center">
-                    <h1 style="color:black;">News</h1>
-                    <a href="/" style="color:black;">Home</a> <i class="fa fa-angle-right" style="color:black;"></i> <span style="color:black;">News</span>
-                </div> <!-- /.page-breadcumb -->
+            <div class="ulockd-inner-conraimer-details">
+                <div class="col-lg-12">
+                    <h1 class="text-uppercase">NEWS</h1>
+                </div>
+                <div class="col-lg-12">
+                    <div class="ulockd-icd-layer">
+                        <ul class="ulockd-icd-sub-menu">
+                            <li class="list-inline-item"><a href="#"> HOME </a></li>
+                            <li class="list-inline-item"><a href="#"> &gt; </a></li>
+                            <li class="list-inline-item"> <a href="#"> NEWS </a> </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</section>
+</div>
 
 
-<section id="blog-post" class="has-full-height-background-wrapper">
+
+<section class="our-blog-home5 bgc-f9 pb70 ovh">
     <div class="container">
         <div class="row">
-            <!-- .blog-content -->
+            <div class="col-lg-12">
+                <div class="main-title hvr-float-shadow text-start">
+                    <h5 class="subtitle">From Blog Posts</h5>
+                    <h2 class="title mb20">Our Latest <br><span class="text-thm">News &amp; Articles</span> </h2>
 
+                    <p>UNIC CARE SERVICES LTD is committed to keeping you informed and engaged. Our blog features the latest news, articles, and updates about our care home and the broader community. Join us as we share stories, tips, and insights related to the care and support of our residents.</p>
 
-            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                </div>
+            </div>
+            <div class="col-xl-12 text-center">
+                <div class="row">
 
+                    @foreach (var item in Model.NewsBlog)
+                    {
+                        <div class="col-md-4">
+                            <div class="item">
+                                <article class="ulockd-blog-post1 hvr-float-shadow text-start">
+                                    <div class="post-thumb">
+                                        <img class="img-fluid img-whp" src="@item.Image" alt="">
+                                    </div>
+                                    <div class="post-details">
+                                        <div class="d-flex mb25">
+                                            <div class="post-info text-thm ms-0 me-4">
+                                                <span class="day">@item.Date.ToString("dd")</span>
+                                                <span class="month">@item.Date.ToString("MMM yyyy")</span>
+                                            </div>
 
+                                        </div>
+                                        <p>@item.ShortDescription</p>
+                                        <a asp-page="./Continue" asp-route-id="@item.Id">Continue...</a>
 
-
-                @foreach (var item in Model.NewsBlog)
-                {
-                    <!--Start single blog post item-->
-                    <div class="single-blog-post-item text-center">
-                        <div class="blog-img-holder">
-                            <img src="@item.Image" alt="">
-                            <div class="overlay">
-                                <div class="inner-holder">
-                                    <ul class="button">
-                                        <li><a asp-page="./More" asp-route-id="@item.Id"><i class="fa fa-link"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="blog-post-date">
-                                <h1>
-                                    @item.Date.ToString("dd")
-                                    <br> <span>
-                                        @item.Date.ToString("MMM")
-                                    </span>
-                                </h1>
-                            </div>
-                        </div>
-                        <div class="blog-content-box">
-                            <div class="single-bolg-title">
-                                <h3>@item.Title</h3>
-
-                            </div>
-                            <div class="single-blog-text">
-                                <div class="single-blog-read-more">
-                                    <a asp-page="./More" asp-route-id="@item.Id">read more</a>
-                                </div>
+                                    </div>
+                                </article>
                             </div>
                         </div>
-                    </div>
-
-                }
+                    }
 
 
-            </div> <!-- /.blog-content -->
+
+                </div>
+            </div>
+
         </div>
     </div>
 </section>

@@ -13,11 +13,11 @@ namespace UniCare.Areas.Identity.Pages.Account.Manage
 {
     public class DownloadPersonalDataModel : PageModel
     {
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<UniCare.Data.Model.Profile> _userManager;
         private readonly ILogger<DownloadPersonalDataModel> _logger;
 
         public DownloadPersonalDataModel(
-            UserManager<IdentityUser> userManager,
+            UserManager<UniCare.Data.Model.Profile> userManager,
             ILogger<DownloadPersonalDataModel> logger)
         {
             _userManager = userManager;

@@ -8,11 +8,11 @@ namespace UniCare.Areas.Identity.Pages.Account.Manage
 {
     public class PersonalDataModel : PageModel
     {
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<UniCare.Data.Model.Profile> _userManager;
         private readonly ILogger<PersonalDataModel> _logger;
 
         public PersonalDataModel(
-            UserManager<IdentityUser> userManager,
+            UserManager<UniCare.Data.Model.Profile> userManager,
             ILogger<PersonalDataModel> logger)
         {
             _userManager = userManager;
