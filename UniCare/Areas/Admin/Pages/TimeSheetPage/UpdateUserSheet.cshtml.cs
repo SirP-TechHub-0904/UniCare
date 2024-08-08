@@ -74,6 +74,7 @@ namespace UniCare.Areas.Admin.Pages.TimeSheetPage
             usertimesheet.AcceptedReason = UserTimeSheet.AcceptedReason;
             usertimesheet.UserId = UserTimeSheet.UserId;
             usertimesheet.PostCode = UserTimeSheet.PostCode;
+            usertimesheet.OneToOne = UserTimeSheet.OneToOne;
 
 
             _context.Attach(usertimesheet).State = EntityState.Modified;

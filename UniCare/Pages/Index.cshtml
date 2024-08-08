@@ -15,16 +15,14 @@
 </style>
 <!-- Home Design -->
 <div class="master-slider ms-skin-default" id="masterslider">
-    <div class="ms-slide slide-3" data-delay="5">
-        <!-- slide background -->
+    @*<div class="ms-slide slide-3" data-delay="5">
 
+            <video autoplay="autoplay"  loop="loop" id="myVideo">
+                <source src="~/image/vi.webm" type="video/webm">
+                Any alternate text.
+            </video>
 
-        <video autoplay="autoplay" @*muted="muted"*@ loop="loop" id="myVideo">
-            <source src="~/image/vi.webm" type="video/webm">
-            Any alternate text.
-        </video>
-
-    </div>
+        </div>*@
 
     <div class="ms-slide slide-3" data-delay="5">
         <!-- slide background -->
@@ -86,7 +84,7 @@
             data-duration="2500"
             data-delay="3000"
             data-ease="easeOutExpo">
-            Welcome to Elm House, a haven where comfort, community, and care unite. Our inviting residential care home caters to individuals with learning disabilities and autism, fostering a supportive environment where all feel valued. Come tour Elm House and discover its warm embrace.
+            Welcome to Elm House, a heaven where comfort, community, and care unite. Our inviting residential care home caters to individuals with learning disabilities and autism, fostering a supportive environment where all feel valued. Come tour Elm House and discover its warm embrace.
         </h5>
         <a class="ms-layer btn3 uppercase"
            style="left: 120px; top: 300px; background-color: #f40000;"
@@ -113,46 +111,55 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-xl-3 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInUp;">
+            <div class="col-sm-6 col-xl-3 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.7s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.7s; animation-name: fadeInUp;">
                 <div class="service-icon-box">
                     <div class="count">01</div>
+                    <div class="icon text-thm3"><span class="flaticon-cross"></span></div>
+                    <div class="details">
+                        <h3 class="title">
+                            Family Involvement
+                        </h3>
+                        <p>
+                            We believe in the importance of family involvement in our residents' care. We work closely with families to keep them informed and involved, ensuring a collaborative approach to supported living
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xl-3 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInUp;">
+                <div class="service-icon-box">
+                    <div class="count">02</div>
                     <div class="icon text-thm3"><span class="flaticon-nurse"></span></div>
                     <div class="details">
                         <h3 class="title">Assisted Living</h3>
-                        <p>Individuals cabin care services.</p>
+                        <p>At Unic Care, we provide Assisted Living services that balance personal freedom with professional care, ensuring every resident enjoys a life of dignity, independence, and fulfillment in a safe, nurturing environment.</p>
                     </div>
                 </div>
             </div>
             <div class="col-sm-6 col-xl-3 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeInUp;">
                 <div class="service-icon-box">
-                    <div class="count">02</div>
+                    <div class="count">03</div>
                     <div class="icon text-thm3"><span class="flaticon-medical-4"></span></div>
                     <div class="details">
                         <h3 class="title">Primary Health</h3>
-                        <p>We are providing services for all.</p>
+                        <p>At Unic Care, we believe quality healthcare starts with a strong foundation. Our Primary Health Care services serve as your first point of contact, offering personalized, accessible care that covers everything from preventive measures.</p>
                     </div>
                 </div>
             </div>
             <div class="col-sm-6 col-xl-3 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.5s; animation-name: fadeInUp;">
                 <div class="service-icon-box">
-                    <div class="count">03</div>
+                    <div class="count">04</div>
                     <div class="icon text-thm3"><span class="flaticon-shape-1"></span></div>
                     <div class="details">
-                        <h3 class="title">Qualified Doctors</h3>
-                        <p>Doctors, skilled nurses getting care.</p>
+                        <h3 class="title">CQC standards</h3>
+                        <p>
+                            At Unic Care, our top priority is to deliver safe, effective, and compassionate care. As a CQC-regulated provider, our rating reflects our commitment to maintaining the highest standards of healthcare excellence.
+                            <img src="~/cqc.png" style="height:50px;margin:5px;" class="img-fluid"/>
+                        
+                        </p>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-xl-3 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.7s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.7s; animation-name: fadeInUp;">
-                <div class="service-icon-box">
-                    <div class="count">04</div>
-                    <div class="icon text-thm3"><span class="flaticon-cross"></span></div>
-                    <div class="details">
-                        <h3 class="title">Rehabilitation</h3>
-                        <p>Individuals cabin care services.</p>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>
 </section>
@@ -167,7 +174,7 @@
                         <img src="~/newweb/6.jpg" alt="6.jpg" class="img1">
                         <img src="~/newweb/7.jpg" alt="7.jpg" class="img2">
                         <div class="video_popup_icon">
-                            <a class="video_popup_btn popup-youtube" href="https://www.youtube.com/watch?v=oqNZOOWF8qM"><span class="flaticon-play-button-1"></span></a>
+                            <a class="video_popup_btn popup-youtube" href="https://www.youtube.com"><span class="flaticon-play-button-1"></span></a>
                         </div>
                     </div>
                 </div>
@@ -176,18 +183,18 @@
                 <div class="about-usbox wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeInUp;">
                     <div class="contents">
                         <h2 class="title">
-                            <b>Welcome to Elm House:</b>  Exceptional Care for Every Individual
+                            Comprehensive Care Tailored to Each Individual
+
                         </h2>
                         <p class="ulockd-about-para mb30">
-                            Discover UNIC Care Services Ltd., a family-run health and social care company managing Elm House residential care home. Offering spacious accommodation and personalized care for adults with learning disabilities and Autism spectrum. Our person-centered approach focuses on achieving optimum health and well-being, promoting independence, and enhancing quality of life. Elm House provides a homely and secure environment, ensuring Service Users feel welcomed and supported. With dedicated staff available round the clock, individuals can live independently and to their fullest potential. Learn more about our compassionate care services
-
+                            At Unic care services, we take a holistic approach to supported living. Our comprehensive care plans address the physical, emotional, and social needs of our residents, ensuring they lead fulfilling and balanced lives.
                         </p>
                         <div class="list_check_style mb30">
                             <ul class="mb0">
-                                <li>A few things have stayed unaltered</li>
-                                <li>We are as yet the main full-benefit</li>
-                                <li>Healing facility in the district</li>
-                                <li>Regardless we endeavor to convey the most</li>
+                                <li>Patient-Centered Care</li>
+                                <li>Qualified and Compassionate Staff</li>
+                                <li>Regulatory Compliance</li>
+                                <li>Quality Improvement</li>
                             </ul>
                         </div>
                     </div>
@@ -197,8 +204,8 @@
                             <div class="inner">
                                 <div class="bar">
                                     <div class="bar-innner">
-                                        <div class="bar-fill" data-percent="80" style="width: 80%;">
-                                            <div class="percent">80%</div>
+                                        <div class="bar-fill" data-percent="100" style="width: 100%;">
+                                            <div class="percent">100%</div>
                                         </div>
                                     </div>
                                 </div>
@@ -209,15 +216,15 @@
                             <div class="inner">
                                 <div class="bar">
                                     <div class="bar-innner">
-                                        <div class="bar-fill" data-percent="90" style="width: 90%;">
-                                            <div class="percent">90%</div>
+                                        <div class="bar-fill" data-percent="100" style="width: 100%;">
+                                            <div class="percent">100%</div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <a class="btn btn-lg btn-thm text-center" asp-page="/Book">Make an Appointment</a>
+                    <a class="btn btn-lg btn-thm text-center" asp-page="/Contact">Book An Appointment</a>
                     <!-- Product Popup View Start-->
                     <!-- Product Popup View End-->
                 </div>
@@ -291,9 +298,9 @@
                     <div class="thumb"><img class="img-fluid img-whp" src="~/newweb/6(1).jpg" alt=""></div>
                     <div class="details">
                         <span class="icon text-thm flaticon-people"></span>
-                        <h3 class="title"><a href="#">Financial Support</a></h3>
+                        <h3 class="title"><a href="#">Access to Care</a></h3>
                         <p class="para">
-                            We assist with managing your personal finances, offering guidance and support to ensure you maintain financial stability and security, helping you plan and budget effectively.
+                            At Unic care, we prioritize making healthcare accessible and convenient for everyone. Our commitment to Access to Care ensures you receive timely, high-quality supported living wherever you are, with a focus on removing barriers and providing seamless care.
                         </p>
                     </div>
                 </div>
@@ -313,20 +320,110 @@
         </div>
     </div>
 </section>
+
+
+<section class="ulockd-about pb70">
+    <div class="container">
+        <div class="row">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-4 text-center">
+                    <div class="main-title hvr-float-shadow">
+                        <h2 class="title">Things to Know About US</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="ulockd-faq-box">
+                    <div class="ulockd-faq-content mb30">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <div class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapsex" data-bs-target="#collapsexOne" aria-expanded="true" aria-controls="collapsexOne">
+                                        <i class="fas fa-angle-down icon-1"></i>
+                                        <i class="fas fa-angle-up icon-2"></i> Rehabilitation
+                                    </button>
+                                </div>
+                                <div id="collapsexOne" class="accordion-collapsex collapsex show" role="tabpanel" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>
+                                            At Unic Care, we provide comprehensive rehabilitation services designed to support your recovery, restore function, and enhance your quality of life through personalized care tailored to your needs.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="accordion-header" role="tab" id="headingTwo">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapsex" data-bs-target="#collapsexTwo" aria-expanded="true" aria-controls="collapsexTwo">
+                                        <i class="fas fa-angle-down icon-1"></i>
+                                        <i class="fas fa-angle-up icon-2"></i>
+                                        Delicious and Healthy Meals
+                                    </button>
+                                </div>
+                                <div id="collapsexTwo" class="accordion-collapsex collapsex" role="tabpanel" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>
+                                            Our culinary team prepares delicious and nutritious meals tailored to meet the dietary needs and preferences of our residents. We prioritize balanced, healthy meals to support overall wellness.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <div class="accordion-header" role="tab" id="headingFour">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapsex" data-bs-target="#collapsexFour" aria-expanded="true" aria-controls="collapsexFour">
+                                        <i class="fas fa-angle-down icon-1"></i> <i class="fas fa-angle-up icon-2"></i> Engaging Activities and Programs
+                                    </button>
+                                </div>
+                                <div id="collapsexFour" class="accordion-collapsex collapsex" role="tabpanel" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>
+                                            Our wide range of activities and programs are designed to keep residents engaged and connected. From arts and crafts to fitness classes and social events, there’s something for everyone to enjoy.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="accordion-header" role="tab" id="headingFive">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapsex" data-bs-target="#collapsexFive" aria-expanded="true" aria-controls="collapsexFive">
+                                        <i class="fas fa-angle-down icon-1"></i>
+                                        <i class="fas fa-angle-up icon-2"></i>Personalized Care Plans
+                                    </button>
+                                </div>
+                                <div id="collapsexFive" class="accordion-collapsex collapsex" role="tabpanel" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>
+
+
+                                            Every resident at Unic care receives a personalized care plan tailored to their specific needs and preferences. Our dedicated team works closely with residents and their families to develop and implement these individualized plans.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
 <section class="ulockd-frst-divider">
     <div class="container">
         <div class="row">
             <div class="col-lg-9">
                 <div class="text-center text-md-start mb20-sm">
-                    <h2 class="ulockd-dvidr-mttl">Book a Tour of Elm House!</h2>
+                    <h2 class="ulockd-dvidr-mttl">Book a Tour with Elm House</h2>
                     <h2 class="ulockd-dvidr-mttl" style="font-size:25px;">
-                        We provide a diverse range of leisure and recreational activities that people can choose to be involved with, which is fun and inspiring, engaging.
-                        </h2>
-</div>
+                        We provide a diverse range of leisure and recreational activities that people can choose to be involved with, which is fun, inspiring and engaging.
+                    </h2>
+                </div>
             </div>
             <div class="col-lg-3">
                 <div class="ulockd-dvidr-btn text-uppercase text-center text-md-end mt0">
-                    <a class="btn btn-default btn-white hvr-overline-from-center" asp-page="/Contact">Get Appointment</a>
+                    <a class="btn btn-default btn-white hvr-overline-from-center" asp-page="/Contact">Book An Appointment</a>
                 </div>
             </div>
         </div>
@@ -336,17 +433,22 @@
 <section class="ulockd-about pb70">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-6">
                 <div class="main-title">
-                    <h2 class="title">How Can We <span class="text-thm">Helped ?</span></h2>
-                    <p style="color: #181616; font-size: 36px;">Knowledge About Our Service</p>
+                    <h2 class="title">
+                        Frequently Asked Questions
+
+                    </h2>
+                    <p style="color: #181616; font-size: 36px;">
+                        Your Questions Answered
+                    </p>
                 </div>
                 <div class="row">
 
                     <div class="col-lg-12">
                         <div class="para">
-                          
-                            <p>Our service provides accommodation and personal care and support for people with learning disabilities and autism. We provide accommodation that is comfortable and welcoming and well-equipped with a unique service where bespoke support plan is tailored to individual’s needs, preference/s and goals.</p>
+
+                            <p>Find answers to common questions about our supported living services, including eligibility, care plans, and more. If you have additional questions, don't hesitate to reach out to us.</p>
                         </div>
                     </div>
                 </div>
@@ -354,25 +456,25 @@
                     <div class="col-sm-6 col-md-6 col-lg-4">
                         <div class="funfact_home5_style text-center">
                             <p>Happy Residents</p>
-                            <div class="timer text-thm">1210</div>
+                            <div class="timer text-thm">100</div>%
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-6 col-lg-4">
                         <div class="funfact_home5_style text-center">
-                            <p>Awards Won</p>
-                            <div class="timer text-thm">5</div>
+                            <p>Care Quality Commission (CQC) standards</p>
+                            <div class="timer text-thm">100</div>%
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-6 col-lg-4">
                         <div class="funfact_home5_style text-center">
-                            <p>Dedicated Staff</p>
-                            <div class="timer text-thm">70</div>
+                            <p>Staff Dedication</p>
+                            <div class="timer text-thm">100</div>%
                         </div>
                     </div>
                 </div>
 
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-6">
                 <div class="ulockd-faq-box">
                     <div class="ulockd-faq-content mb30">
                         <div class="accordion" id="accordionExample">
@@ -388,11 +490,17 @@
                             </div>
                             <div class="accordion-item">
                                 <div class="accordion-header" role="tab" id="headingTwo">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"> <i class="fas fa-angle-down icon-1"></i> <i class="fas fa-angle-up icon-2"></i> What does in-home care cost? </button>
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                        <i class="fas fa-angle-down icon-1"></i>
+                                        <i class="fas fa-angle-up icon-2"></i>
+                                        What does Safety and Security mean to us?
+                                    </button>
                                 </div>
                                 <div id="collapseTwo" class="accordion-collapse collapse" role="tabpanel" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <p>In-home care costs vary based on the services required and the duration of care. We encourage you to contact UNIC CARE SERVICES LTD directly to discuss your specific needs and receive a comprehensive list of services and rates tailored to your situation.</p>
+                                        <p>
+                                            A Safe and Secure Environment Ensuring the safety and security of our residents is our top priority. Our facilities are equipped with advanced security systems, and our staff is trained to handle emergencies promptly and efficiently.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -436,8 +544,6 @@
 </section>
 
 <!-- Our Funfact Divider -->
- 
-
 <!-- Our Gallery -->
 <section class="ulockd-service-three pb70">
     <div class="container">
@@ -445,7 +551,7 @@
             <div class="col-lg-6 offset-lg-3 text-center">
                 <div class="main-title hvr-float-shadow">
                     <h2 class="text-uppercase">Our Photo <span class="text-thm">Gallery</span></h2>
-                    
+
                     <p>Our gallery showcases the warmth and dedication at UNIC CARE SERVICES LTD. We are a privately owned, family-operated care home, proudly serving Holmes and the surrounding areas since our establishment. Explore our moments of care, compassion, and community.</p>
                 </div>
             </div>
@@ -453,7 +559,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="masonry-isotop">
-                    
+
                     <!-- Masonry Grid -->
                     <div class="row masonry-gallery clearfix" style="position: relative; height: 660px;">
                         <!-- Masonry Item -->
@@ -524,7 +630,7 @@
                                 </div>
                             </div>
                         </div>
-                       
+
                     </div>
                     <!-- Masonry Gallery Grid Item -->
                 </div>
@@ -534,8 +640,6 @@
 </section>
 
 <!-- Our Team -->
- 
-
 <!-- Our Blog -->
 <section class="our-blog-home5 bgc-f9 pb70 ovh">
     <div class="container">
@@ -544,14 +648,14 @@
                 <div class="main-title hvr-float-shadow text-start">
                     <h5 class="subtitle">From Blog Posts</h5>
                     <h2 class="title mb20">Our Latest <br><span class="text-thm">News &amp; Articles</span> </h2>
-                     
+
                     <p>UNIC CARE SERVICES LTD is committed to keeping you informed and engaged. Our blog features the latest news, articles, and updates about our care home and the broader community. Join us as we share stories, tips, and insights related to the care and support of our residents.</p>
 
                 </div>
             </div>
             <div class="col-xl-12 text-center">
                 <div class="row">
-                     
+
                     @foreach (var item in Model.NewsBlog)
                     {
                         <div class="col-md-4">
@@ -566,23 +670,23 @@
                                                 <span class="day">@item.Date.ToString("dd")</span>
                                                 <span class="month">@item.Date.ToString("MMM yyyy")</span>
                                             </div>
-                                             
+
                                         </div>
                                         <p>@item.ShortDescription</p>
-                                    <a asp-page="./Continue" asp-route-id="@item.Id">Continue...</a>
-                                    
+                                        <a asp-page="./Continue" asp-route-id="@item.Id">Continue...</a>
+
                                     </div>
                                 </article>
                             </div>
                         </div>
                     }
 
-                       
 
-                    </div>
-                     </div>
-                
+
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
- 
+

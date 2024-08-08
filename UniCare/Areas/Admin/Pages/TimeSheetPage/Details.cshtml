@@ -53,6 +53,7 @@ else
                         <th>Acceptance Countdown</th>
                         <th>User Start Time</th>
                         <th>User End Time</th>
+                        <th>Sheet Type</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -149,6 +150,16 @@ else
                                 }
                             </td>
                             <td>
+                                @if (item.OneToOne == true)
+                                {
+<span>1:1</span>
+                                }
+                                else
+                                {
+                                    <span>General</span>
+                                }
+                            </td>
+                            <td>
                                 <a asp-page="./SheetDetails" class="btn btn-primary btn-sm" asp-route-id="@item.Id">Details</a>
                                 <a asp-page="./UpdateUserSheet" class="btn btn-warning btn-sm" asp-route-id="@item.Id">Update</a>
                             </td>
@@ -216,7 +227,11 @@ else
                         <input asp-for="UserTimeSheet.AcceptanceExpirationTime" class="form-control" />
                         <span asp-validation-for="UserTimeSheet.AcceptanceExpirationTime" class="text-danger"></span>
                     </div>
-
+                    <div class="form-group">
+                        <label asp-for="UserTimeSheet.OneToOne" class="control-label"></label>
+                        <input asp-for="UserTimeSheet.OneToOne"  />
+                        <span asp-validation-for="UserTimeSheet.OneToOne" class="text-danger"></span>
+                    </div>
                     <div class="form-group">
                         <input type="submit" value="Add" class="btn btn-primary" />
                     </div>

@@ -40,5 +40,7 @@ namespace UniCare.Data
         public DateTime? UserSheetStartTime { get; set; }
         [Display(Name = "My Sheet End Time")]
         public DateTime? UserSheetEndTime { get; set; }
+
+        public bool OneToOne { get; set; }
     }
 }

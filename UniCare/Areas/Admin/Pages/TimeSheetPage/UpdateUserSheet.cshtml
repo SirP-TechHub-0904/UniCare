@@ -40,7 +40,7 @@
                 <input asp-for="UserTimeSheet.Address" class="form-control" />
                 <span asp-validation-for="UserTimeSheet.Address" class="text-danger"></span>
             </div>
-           
+
             <div class="form-group">
                 <label asp-for="UserTimeSheet.RatePerHour" class="control-label">Rate Per Hour in Pounds</label>
                 <input asp-for="UserTimeSheet.RatePerHour" class="form-control" value="10" />
@@ -73,6 +73,11 @@
                 <label asp-for="UserTimeSheet.AcceptanceExpirationTime" class="control-label">Acceptance Expiration Time</label>
                 <input asp-for="UserTimeSheet.AcceptanceExpirationTime" class="form-control" />
                 <span asp-validation-for="UserTimeSheet.AcceptanceExpirationTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserTimeSheet.OneToOne" class="control-label"></label>
+                <input asp-for="UserTimeSheet.OneToOne" />
+                <span asp-validation-for="UserTimeSheet.OneToOne" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
