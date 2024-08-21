@@ -22,6 +22,7 @@
                         <th>Rate Per Hour</th>
                         <th>Total Hours</th>
                         <th>Address</th>
+                        <th>1 to 1</th>
                         <th>Post Code</th>
                     </tr>
                 </thead>
@@ -42,6 +43,17 @@
                                 <td>@item.RatePerHour.ToString("C")</td>
                                 <td>@totalHours.ToString("F2")</td>
                                 <td>@item.Address</td>
+                                <td>
+                                    @if (item.OneToOne == true)
+                                    {
+
+                                        <span class="btn btn-success">Yes</span>
+                                    }
+                                    else
+                                    {
+                                        <span>No</span>
+                                    }
+                                </td>
                                 <td>@item.PostCode</td>
                             </tr>
                         }

@@ -24,13 +24,13 @@
 
 <div class="card">
     <div class="card-header">
-        <form method="get">
+        @*<form method="get">
             <input type="hidden" name="id" value="@Model.UserRota.Id" />
             <input type="hidden" id="currentYear" name="year" value="@Model.CurrentYear" />
-            <input type="hidden" id="currentWeek" name="week" value="@Model.CurrentWeek" />
+            <input type="hidden" id="currentWeek" name="week" value="@Model.CurrentWeek" />*@
 
             <div class="row">
-                <div class="col-md-3">
+                @*<div class="col-md-3">
                     <label for="year">Year:</label>
                     <select id="yearSelect" class="form-control" name="year" onchange="updateCurrentYear()">
                         @for (int i = DateTime.Now.Year; i >= DateTime.Now.Year - 1; i--)
@@ -68,18 +68,29 @@
                             <option value="@i" selected="@(i == Model.CurrentDay)">Day @i</option>
                         }
                     </select>
+                </div>*@
+                <div class="col-md-3">
+                    <form method="get">
+                        <input type="hidden" name="id" value="@Model.UserRota.Id" />
+                        <div class="input-group input-group-sm" style="margin-bottom:7px;">
+                            <input type="date" name="searchdate" class="form-control" placeholder="@TempData["date"]">
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-success btn-flat">Search</button>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-md-3">
+                    <a asp-page="./Details" asp-route-id="@Model.UserRota.Id" asp-route-date="@Model.NextWeek" class="btn btn-success float-right" style="float:right;color:white;">@Model.NextWeekTitle</a>
+
                 </div>
                 <div class="col-md-3">
-                    <button type="submit" class="btn btn-primary">Filter</button>
-                </div>
-                <div class="col-md-3">
-                    <button type="button" class="btn btn-primary" onclick="adjustWeek(-1)">Previous Week</button>
-                </div>
-                <div class="col-md-3">
-                    <button type="button" class="btn btn-primary" onclick="adjustWeek(1)">Next Week</button>
+                    <a asp-page="./Details" asp-route-id="@Model.UserRota.Id" asp-route-date="@Model.PreviousWeek" class="btn btn-success float-right" style="float:right;color:white;margin-right:9px;">@Model.PreviousWeekTitle</a>
+
                 </div>
             </div>
-        </form>
+        @*</form>*@
     </div>
     <div class="card-body">
         <h3 style="text-align:center;font-weight:900;">@Model.DateTitle</h3>
@@ -114,7 +125,7 @@
     
         <div class="">
             <a class="btn btn-primary" asp-page="./Index">Back to List</a>
-            <a class="btn btn-primary" asp-page="./PrintRota" asp-route-id="@Model.UserRota.Id" asp-route-day="@Model.RouteDay" asp-route-week="@Model.RouteWeek" asp-route-month="@Model.RouteMonth" asp-route-year="@Model.RouteYear">Print Rota</a>
+            <a class="btn btn-primary" asp-page="./PrintRota" asp-route-id="@Model.UserRota.Id" asp-route-date="@Model.Qdate" asp-route-searchdate="@Model.Sdate">Print Rota</a>
         </div>
     </div>
 </div>

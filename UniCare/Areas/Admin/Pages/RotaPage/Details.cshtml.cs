@@ -8,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using UniCare.Data;
 using UniCare.Data.Model;
 using System.Globalization;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Reflection;
 
 namespace UniCare.Areas.Admin.Pages.RotaPage
 {
@@ -23,23 +25,27 @@ namespace UniCare.Areas.Admin.Pages.RotaPage
         public UserRota UserRota { get; set; } = default!;
         public List<UserTimeSheet> UserTimeSheets { get; set; } = default!;
         public string DateTitle { get; set; } = string.Empty;
-        public int CurrentYear { get; set; }
-        public int CurrentMonth { get; set; }
-        public int CurrentWeek { get; set; }
-        public int CurrentDay { get; set; }
+        //public int CurrentYear { get; set; }
+        //public int CurrentMonth { get; set; }
+        //public int CurrentWeek { get; set; }
+        //public int CurrentDay { get; set; }
 
-        public int? RouteYear { get; set; }
-        public int? RouteMonth { get; set; }
-        public int? RouteWeek { get; set; }
-        public int? RouteDay { get; set; }
+        //public int? RouteYear { get; set; }
+        //public int? RouteMonth { get; set; }
+        //public int? RouteWeek { get; set; }
+        //public int? RouteDay { get; set; }
+        public string PreviousWeek { get; set; }
+        public string PreviousWeekTitle { get; set; }
+        public string NextWeek { get; set; }
+        public string NextWeekTitle { get; set; }
 
-        public async Task<IActionResult> OnGetAsync(int? id, int? day, int? week, int? month, int? year)
+        public string Qdate { get;set;}
+        public string Sdate { get;set;}
+        public async Task<IActionResult> OnGetAsync(int? id, string date = null, string searchdate = null)
         {
-            RouteYear = year;
-            RouteMonth = month;
-            RouteWeek = week;
-            RouteDay = day;
-
+             
+            Qdate = date;
+            Sdate = searchdate;
 
             if (id == null || _context.UserRotas == null)
             {
@@ -62,42 +68,53 @@ namespace UniCare.Areas.Admin.Pages.RotaPage
          .Where(m => m.PostCode == userclient.PostCode && m.TimesheetAcceptance == UniCare.Data.Model.Enum.TimesheetAcceptance.Accepted);
 
             DateTime now = DateTime.Now;
+            if (date != null)
+            {
 
-            if (!year.HasValue && !day.HasValue && !month.HasValue && !week.HasValue)
-            {
-                year = now.Year;
-                week = CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(now, CalendarWeekRule.FirstFourDayWeek, DayOfWeek.Monday);
-            }
-            CurrentYear = year ?? now.Year;
-            CurrentMonth = month ?? 0;
-            CurrentWeek = week ?? CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(now, CalendarWeekRule.FirstFourDayWeek, DayOfWeek.Monday);
-            CurrentDay = day ?? 0;
-            if (year.HasValue)
-            {
-                if (day.HasValue)
-                {
-                    query = query.Where(m => m.TimeSheet.Date.Year == year.Value && m.TimeSheet.Date.Month == month.Value && m.TimeSheet.Date.Day == day.Value);
-                    DateTitle = $"Day {now.ToString("dddd dd MMM yyyy")}";
-                }
-                else if (week.HasValue)
-                {
-                    DateTime startOfWeek = FirstDateOfWeek(year.Value, week.Value);
-                    DateTime endOfWeek = startOfWeek.AddDays(7);
-                    query = query.Where(m => m.TimeSheet.Date >= startOfWeek && m.TimeSheet.Date < endOfWeek);
-                    DateTitle = $"Week {startOfWeek.ToString("dd MMM yyyy")} - {endOfWeek.ToString("dd MMM yyyy")}";
-                }
-                else if (month.HasValue)
-                {
-                    query = query.Where(m => m.TimeSheet.Date.Year == year.Value && m.TimeSheet.Date.Month == month.Value);
-                    DateTitle = now.ToString("MMMM yyyy");
-                }
-                else
-                {
-                    DateTitle = year.Value.ToString();
-                }
+                now = DateTime.Parse(date).AddDays(1);
             }
 
+            if (searchdate != null)
+            {
+                now = DateTime.Parse(searchdate);
+            }
+            if (searchdate != null)
+            {
+
+                DateTitle = now.ToString("ddd dd MMM, yyyy");
+                 query = query
+                  .Where(ob => ob.Date.Year == now.Year && ob.Date.Month == now.Month && ob.Date.Day == now.Day)
+                  .AsQueryable();
+            
+
+            }
+            else if(date != null) 
+            {
+                DateTime startOfWeek = now.AddDays(-1 * Convert.ToInt32(now.DayOfWeek)).AddDays(1);
+                DateTime endOfWeek = startOfWeek.AddDays(5);
+
+                DateTitle = $"Week {startOfWeek.ToString("dd MMM yyyy")} - {endOfWeek.ToString("dd MMM yyyy")}";
+                query = query
+                  .Where(ob => startOfWeek <= ob.Date && ob.Date < endOfWeek)
+                 .AsQueryable();
+
+            }
+            else
+            {
+                DateTitle = now.ToString("ddd dd MMM, yyyy");
+                query = query
+                    .Where(ob => ob.Date.Year == now.Year && ob.Date.Month == now.Month && ob.Date.Day == now.Day)
+                    .AsQueryable();
+            }
+
+             
             UserTimeSheets = await query.OrderByDescending(x => x.Date).ToListAsync();
+            DateTime mondayOfLastWeek = now.AddDays(-(int)now.DayOfWeek - 6);
+            DateTime mondayOfNextWeek = now.AddDays(-(int)now.DayOfWeek + 8);
+            PreviousWeek = mondayOfLastWeek.Date.ToString("dd MMMM yyyy");
+            NextWeek = mondayOfNextWeek.Date.ToString("dd MMMM yyyy");
+            PreviousWeekTitle = "Previous " + mondayOfLastWeek.Date.ToString("dd MMMM") + " to " + mondayOfLastWeek.Date.AddDays(4).ToString("dd MMMM");
+            NextWeekTitle = "Next " + mondayOfNextWeek.Date.ToString("dd MMMM") + " to " + mondayOfNextWeek.Date.AddDays(4).ToString("dd MMMM");
 
             return Page();
         }

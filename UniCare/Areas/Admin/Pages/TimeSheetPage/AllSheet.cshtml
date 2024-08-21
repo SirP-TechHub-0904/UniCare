@@ -1,0 +1,100 @@
+﻿@page
+@model UniCare.Areas.Admin.Pages.TimeSheetPage.AllSheetModel
+@{
+}
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">
+           ALL TIMESHEET REPORT FOR @if (Model.MonthYearTitle != null)
+            {@Model.MonthYearTitle.ToUpper()}
+        </h3>
+
+
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+        @if (TempData["success"] != null)
+        {
+            <div class="alert alert-success">
+                <strong>@TempData["success"]</strong>
+            </div>
+
+        }
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped datatable">
+                <thead>
+                    <tr>
+                        <th>S/N</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>
+                            Fullname
+                        </th>
+
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Role</th>
+                        <th>1 to 1</th>
+                        <th>Status</th>
+
+                    </tr>
+                </thead>
+
+                @{
+                    int sn = 0;
+                }
+                <tbody>
+                    @foreach (var item in Model.UserList.OrderBy(x=>x.Date))
+                    {
+                        <tr>
+
+                            <td>
+                                @{
+                                    sn++;
+                                }
+                                @sn
+                            </td>
+                            <td>
+                                @item.Date.ToString("ddd dd-MM-yyyy")
+                            </td>
+                            <td>
+                                @item.StartTime - @item.EndTime
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.User.Surname)
+                                @Html.DisplayFor(modelItem => item.User.FirstName)
+
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.User.Email)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.User.PhoneNumber)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.User.Role)
+                            </td>
+                            <td>
+                                @if (item.OneToOne == true)
+                                {
+
+                                    <span class="btn btn-success">Yes</span>
+                                }
+                                else
+                                {
+                                    <span>No</span>
+                                }
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.User.UserStatus)
+                            </td>
+
+
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
