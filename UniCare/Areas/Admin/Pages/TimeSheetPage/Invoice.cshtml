@@ -176,7 +176,7 @@
                                                     <table class="table-bordered" style="width: 100%; border-collapse: collapse; margin-bottom: 7px;">
                                                         <tbody>
                                                             <tr>
-                                                                <th colspan="4" style="text-align:center;font-weight:900;background-color:#87eda6;color:black;">
+                                                                <th colspan="6" style="text-align:center;font-weight:900;background-color:#87eda6;color:black;">
                                                                     EMPLOYEE
                                                                 </th>
                                                             </tr>
@@ -228,25 +228,19 @@
                                                                     @Model.Invoice.User.DOB
                                                                 </td>
                                                             </tr>*@
-                                                            @*<tr>
+                                                            <tr>
                                                                     <th align="start" style="width:20%;">
                                                                         Email
                                                                     </th>
-                                                                    <td align="start" style="width:30%;">
+                                                                    <td align="start" colspan="2" style="width:30%;">
                                                                         @Model.Invoice.User.Email
                                                                     </td>
-                                                                    <th align="start" style="width:20%;">
-                                                                        Tel No.
-                                                                    </th>
-                                                                    <td align="start" style="width:30%;">
-                                                                        @Model.Invoice.User.PhoneNumber
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th align="start" style="width:20%;">
+                                                                   
+                                                               
+                                                                    <th align="start" style="width:15%;">
                                                                         Address
                                                                     </th>
-                                                                    <td align="start" colspan="3" style="width:80%;">
+                                                                    <td align="start" colspan="2" style="width:35%;">
                                                                         @Model.Invoice.User.Address
                                                                     </td>
 
@@ -255,16 +249,16 @@
                                                                     <th align="start" style="width:20%;">
                                                                         N.I. Number
                                                                     </th>
-                                                                    <td align="start" style="width:30%;">
+                                                                    <td align="start" colspan="2" style="width:30%;">
                                                                         @Model.Invoice.NINumber
                                                                     </td>
                                                                     <th align="start" style="width:20%;">
                                                                         P45
                                                                     </th>
-                                                                    <td align="start" style="width:30%;">
+                                                                    <td align="start" colspan="2" style="width:30%;">
                                                                         @Model.Invoice.P45
                                                                     </td>
-                                                                </tr>*@
+                                                                </tr>
 
 
                                                         </tbody>
@@ -277,18 +271,18 @@
                                                 <table class="table-bordered" style="width: 100%; border-collapse: collapse; margin-bottom: 7px;">
                                                     <tbody>
                                                         <tr>
-                                                            <th style="width:17%;">
+                                                            <th style="width:33%;">
                                                                 Rate
                                                             </th>
-                                                            <th style="width:17%;">
+                                                            <th style="width:33%;">
                                                                 Hours
                                                             </th>
-                                                            <th style="width:17%;">
+                                                            <th style="width:33%;">
                                                                 Payment
                                                             </th>
-                                                            <th style="width:49%;">
+                                                            @*<th style="width:49%;">
                                                                 Deductions
-                                                            </th>
+                                                            </th>*@
                                                         </tr>
                                                         <tr>
                                                             <td align="right">
@@ -300,11 +294,11 @@
                                                             <td align="right">
                                                                 @Model.Invoice.TotalPay
                                                             </td>
-                                                            <td align="right">
+                                                            @*<td align="right">
                                                                 Income Tax:  @Model.Invoice.IncomeTax
                                                                 <br />
                                                                 National Insurance:  @Model.Invoice.NationalInsurance
-                                                            </td>
+                                                            </td>*@
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -321,7 +315,7 @@
                                                                 @Model.Invoice.TotalPay
                                                             </th>
                                                         </tr>
-                                                        <tr>
+                                                        @*<tr>
                                                             <th>
                                                                 TOTAL DEDUCTION (£)
                                                             </th>
@@ -337,7 +331,7 @@
                                                             <th>
                                                                 @Model.Invoice.NetPay
                                                             </th>
-                                                        </tr>
+                                                        </tr>*@
                                                     </tbody>
                                                 </table>
                                             </div>
