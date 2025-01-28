@@ -20,7 +20,7 @@ namespace UniCare.Data.Model
         [Display(Name = "Surname")]
         public string? Surname { get; set; }
         public string? IdNumber { get; set; }
-
+        public DateTime Date { get;set;}
         [Display(Name = "Date Of Birth")]
         public string? DateOfBirth { get; set; }
 

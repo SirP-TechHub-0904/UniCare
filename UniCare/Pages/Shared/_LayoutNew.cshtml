@@ -74,10 +74,10 @@
 
         @@media (min-width: 768px) {
 
-        .hidden-desktop{
-            display:none;
+            .hidden-desktop {
+                display: none;
+            }
         }
-                       }
     </style>
 </head>
 <body class="mm-wrapper">
@@ -102,7 +102,9 @@
                     <li class="mm-listitem">
                         <a class="mm-btn mm-btn_next mm-listitem__btn mm-listitem__text" asp-page="/News">News</a>
                     </li>
-
+                    <li class="mm-listitem">
+                        <a class="mm-btn mm-btn_next mm-listitem__btn mm-listitem__text" asp-page="/ApplicationPage">Apply</a>
+                    </li>
                     <li class="mm-listitem">
                         <a class="mm-btn mm-btn_next mm-listitem__btn mm-listitem__text" asp-page="/Contact">Book An Appointment</a>
                     </li>
@@ -119,44 +121,7 @@
             <div id="preloader" class="preloader" style="display: none;">
                 <div id="pre" class="preloader_container"><div class="preloader_disabler btn btn-default">Disable Preloader</div></div>
             </div>
-            @*<div class="header-top">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="ulockd-social-linked">
-                                    <ul>
-                                        <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-rss"></i></a></li>
-                                        <li class="list-inline-item"><a href="#"><i class="fab fa-google"></i></a></li>
-                                        <li class="list-inline-item"><a href="#"><i class="fab fa-pinterest"></i></a></li>
-                                        <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="ulockd-welcm-ht text-center">
-                                    <p class="ulockd-welcntxt">Welcome To Our Old Care &amp; Health Service</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="ulockd-welcm-ht text-end">
-                                    <ul>
 
-                                        <li class="list-inline-item">
-                                            <a asp-page="/Book">
-                                                <div >
-                                                    <i class="fas fa-user"></i> Book An Appointment
-
-                                                </div>
-                                            </a>
-
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>*@
             <div class="header-middle hidden-desktop" style=" background-color: #5cb34a; ">
                 <div class="container">
                     <div class="row">
@@ -179,15 +144,6 @@
                     <div class="container">
                         <nav class="navbar bootsnav navbar-expand-lg menu-style1 light-blue on no-full">
                             <!-- Start Top Search -->
-                            @*<div class="top-search bgc-darkblue">
-                                    <div class="container">
-                                        <div class="input-group">
-                                            <span class="input-group-addon"><i class="fas fa-search"></i></span>
-                                            <input type="text" class="form-control" placeholder="Search">
-                                            <span class="input-group-addon close-search"><i class="fas fa-times"></i></span>
-                                        </div>
-                                    </div>
-                                </div>*@
                             <!-- End Top Search -->
 
                             <div class="container">
@@ -210,7 +166,8 @@
                                         <li class="nav-item"><a asp-page="/Index" class="nav-link">Home</a></li>
                                         <li class="nav-item"><a asp-page="/About" class="nav-link">About Us</a></li>
                                         <li class="nav-item"><a asp-page="/Services" class="nav-link">Services</a></li>
-                                        <li class="nav-item"><a asp-page="/News" class="nav-link">News</a></li> 
+                                        <li class="nav-item"><a asp-page="/News" class="nav-link">News</a></li>
+                                        <li class="nav-item"><a asp-page="/ApplicationPage" class="nav-link">Apply</a></li>
                                         <li class="nav-item"><a asp-page="/Contact" class="nav-link">Book An Appointment</a></li>
                                         <li class="nav-item"><a asp-page="/Account/Login" class="nav-link" asp-area="Identity">Login</a></li>
 
@@ -245,30 +202,99 @@
 
             @RenderBody()
             <!-- Our Footer -->
+            <section class="ulockd-footer bgc-thm">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-xl-3">
+                            <div class="ulockd-footer-widget home5_style">
+                                <img alt="footer-logo.png" src="~/file/logo.png" class="img-responsive ulockd-footer-log">
+                                <p class="ulockd-ftr-text text-white text-justify">
+                                    At UNIC CARE SERVICES LTD, we create nurturing homes with personalized care, specializing in support for individuals with learning disabilities and autism, helping them achieve their dreams.
+                                </p>
+                            </div>
+                            <div class="ulockd-footer-newsletter home5_style">
+                                <h4 class="title text-uppercase">News Letter</h4>
+                                <form class="ulockd-mailchimp">
+                                    <div class="input-group">
+                                        <input type="email" class="form-control form_control" placeholder="Your email">
+                                        <button class="btn mc_submit_btn" type="submit"><i class="icon flaticon-right-arrow"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-xl-2">
+                            <div class="footer-qlink home5_style">
+                                <h5 class="text-uppercase text-white">NAVIGATION</h5>
+                                <ul class="list-unstyled">
+                                    <li> <span class="flaticon-checked-mark text-thm3"></span><a class="text-white" asp-page="/About">About Us</a></li>
+                                    <li> <span class="flaticon-checked-mark text-thm3"></span><a class="text-white" asp-page="/Services">Services</a></li>
+                                    <li> <span class="flaticon-checked-mark text-thm3"></span><a class="text-white" asp-page="/News">News</a></li>
+                                    <li> <span class="flaticon-checked-mark text-thm3"></span><a class="text-white" asp-page="/ApplicationPage">Apply</a></li>
+                                    <li> <span class="flaticon-checked-mark text-thm3"></span><a class="text-white" asp-page="/Contact">Contact Us</a></li>
+
+
+
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-xl-4">
+                            <div class="footer-qlink home5_style">
+                                <h5 class="text-uppercase text-white">CONTACT INFORMATION</h5>
+
+                                <p class="text-white"><span style=""><i style="border: 1px solid white; padding: 5px; border-radius: 5px;" class="fab fa-globe"></i></span> 7 Elm Close, Bolsover, Chesterfield, Derbyshire. S44 6EA</p>
+                                <p class="text-white"><span style=""><i style="border: 1px solid white; padding: 5px; border-radius: 5px;" class="fab fa-phone"></i></span> O7503630488, 01246826230 </p>
+                                <p class="text-white"><span style=""><i style="border: 1px solid white; padding: 5px; border-radius: 5px;" class="fab fa-envelope"></i></span>  info@uniccareserviceslimited.co.uk </p>
+                                <p class="text-white"><span style=""><i style="border: 1px solid white; padding: 5px; border-radius: 5px;" class="fab fa-mobile-phone"></i></span> Out of hour/24hrs contact - O7503630488</p>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-xl-3">
+                            <div class="flickr-widget home5_style" style="background-color:white;border-radius:10px;text-align:center;">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h5>DSPT Registered</h5>
+                                        <div style="text-align:center;margin:0 auto;">
+                                            <img src="~/image/iso.png" style="max-height: 70px; text-align: center; margin: 0 auto;" class="img-fluid" />
+                                        </div>
+                                    </div>
+                                    <hr />
+                                    <div class="col-md-12">
+                                        <h5>Regulated by - Care Quality Commission (CQC)</h5>
+                                        <div style="text-align:center;margin:0 auto;">
+                                            <img src="~/cqc.png" style="max-height: 70px; text-align: center; margin: 0 auto;" class="img-fluid" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <style>
+                .ulockd-footer-font-icon a {
+                    border: 1px solid #efefef;
+                    color: #ffffff;
+                }
+            </style>
             <!-- Our CopyRight Section -->
             <section class="copyrights bdrt1 bgc-thm">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="ulockd-footer-widget home5_style">
-                                <p class="ulockd-ftr-text">
-                                    At UNIC CARE SERVICES LTD, we create nurturing homes with personalized care, specializing in support for individuals with learning disabilities and autism, helping them achieve their dreams.
-                                </p>
-
-                            </div>
+                           
                             <ul class="ulockd-footer-font-icon mt15">
-                                <li class="list-inline-item"> <a href="/Terms"> Terms & Conditions</a></li>
-                                <li class="list-inline-item"><a href="/Privacy"> Privacy Policy</a></li>
+                                <li class="list-inline-item"> <a class="text-white" href="/Terms"> Terms & Conditions</a></li>
+                                <li class="list-inline-item"><a class="text-white" href="/Privacy"> Privacy Policy</a></li>
                             </ul>
-                            <p style=" margin-top: 20px;">
+                            <p style=" margin-top: 20px;" class="text-white">
                                 Copyright© Unic Care services LTD.
                                 All right reserved.
                             </p>
                             <ul class="ulockd-footer-font-icon mt15">
                                 <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li class="list-inline-item"><a href="#"><i class="fas fa-rss"></i></a></li>
-                                <li class="list-inline-item"><a href="#"><i class="fab fa-google"></i></a></li>
-                                <li class="list-inline-item"><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fab fa-youtube"></i></a></li>
                                 <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
                             </ul>
                         </div>

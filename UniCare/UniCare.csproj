@@ -5,6 +5,10 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>aspnet-UniCare-88a0ce10-eff6-41a9-b671-7782b565ed73</UserSecretsId>
+	  <AspNetCoreModuleName>AspNetCoreModule</AspNetCoreModuleName>
+	  <AspNetCoreHostingModel>OutOfProcess</AspNetCoreHostingModel>
+	  <AllowUntrustedCertificate>true</AllowUntrustedCertificate>
+	  <UseMsDeployExe>true</UseMsDeployExe>
   </PropertyGroup>
 
   <ItemGroup>
