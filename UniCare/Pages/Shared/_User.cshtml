@@ -252,7 +252,7 @@
                                             </li>
 
                                             <li class="nav-item">
-                                                <a class="nav-link menu-link collapsed" href="javascript:document.getElementById('logoutForm').submit()" role="button" aria-expanded="false" aria-controls="sidebarDashboards">
+                                                <a class="nav-link menu-link collapsed" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="~/" role="button" aria-expanded="false" aria-controls="sidebarDashboards">
                                                     <i class="ri-logout-box-fill"></i>
                                                     <span data-key="t-dashboards">Logout</span>
                                                 </a>
@@ -282,7 +282,7 @@
     <div class="simplebar-track simplebar-vertical" style="visibility: visible;">
         <div class="simplebar-scrollbar" style="height: 200px; transform: translate3d(0px, 56px, 0px); display: block;"></div>
     </div></div>
-    <form asp-area="" id="logoutForm" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
+    <form asp-area="identity" id="logoutForm" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
         @*<button type="submit" class="nav-link btn btn-link text-dark">Logout</button>*@
     </form>
 
